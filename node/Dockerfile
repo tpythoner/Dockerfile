@@ -25,7 +25,7 @@ ADD authorized_keys /root/.ssh/authorized_keys
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh
 
-#添加node天Docker
+#添加node到Docker
 ADD	node-v0.12.4-linux-x64.tar.gz /root
 RUN mv /root/node-v0.12.4-linux-x64 /usr/local/node && cd /usr/local/bin && ln -s /usr/local/node/bin/* . && rm -rf /root/node-v0.12.4-linux-x64
 
