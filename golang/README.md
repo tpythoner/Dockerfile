@@ -1,7 +1,7 @@
 
 1、创建新的docker images
 
-docker build -rm centos:go_sshd .
+docker build -rm -t centos:go_sshd .
 
 2、运行镜像生成容器
 
