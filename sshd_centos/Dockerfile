@@ -1,5 +1,5 @@
 
-FROM        centos:centos7
+FROM        centos:7
 MAINTAINER  tpythoner tpythoner@gmail.com"
 
 #RUN         yum install -y openssh openssh-server openssh-clients
