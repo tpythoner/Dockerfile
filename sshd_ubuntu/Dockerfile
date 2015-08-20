@@ -25,6 +25,8 @@ ADD authorized_keys /root/.ssh/authorized_keys
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh
 
+RUN	echo 'root:123456' | chpasswd
+
 #开放端口
 EXPOSE 22
 
