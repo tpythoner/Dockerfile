@@ -1,5 +1,5 @@
 
-FROM        centos:centos7
+FROM        centos:7
 MAINTAINER  tpythoner tpythoner@gmail.com
 
 #RUN         yum install -y openssh openssh-server openssh-clients
@@ -23,7 +23,8 @@ RUN         /bin/echo -e "LANG=\"en_US.UTF-8\"" > /etc/default/local
 #RUN			yum install -y wget
 #RUN			wget http://golangtc.com/static/go/go1.4.2.linux-amd64.tar.gz
 #RUN			tar zxvf go1.4.2.linux-amd64.tar.gz -C /usr/local/
-ADD			go1.4.2.linux-amd64.tar.gz /root
+#ADD			go1.4.2.linux-amd64.tar.gz /root
+ADD			go1.5beta1.linux-amd64.tar.gz /root
 ADD			golang.conf /root/golang.conf
 RUN			mv /root/go /usr/local/
 #RUN			echo "export GOROOT=/usr/local/go" >> /etc/profile
