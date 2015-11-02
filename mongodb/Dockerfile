@@ -1,5 +1,5 @@
 # 设置继承镜像
-FROM	sshd:dockerfile
+FROM	ubuntu:latest
 
 # 提供一些作者的信息
 MAINTAINER		tpythoner, tpythoner@gmail.com
