@@ -22,8 +22,8 @@ RUN sed -ri 's/session    required     pam_loginuid.so/#session    required     
 
 #复制配置文件到相应位置,并赋予脚本可执行权限
 ADD authorized_keys /root/.ssh/authorized_keys
-#ADD run.sh /run.sh
-#RUN chmod 755 /run.sh
+ADD run.sh /run.sh
+RUN chmod 755 /run.sh
 
 RUN	echo 'root:123456' | chpasswd
 
@@ -40,5 +40,5 @@ RUN			mkdir -p /var/lib/golang
 EXPOSE      22
 EXPOSE      80
 
-#启动sshd服务
-CMD			/usr/sbin/sshd -D
+#设置自启动命令
+CMD ["/run.sh"]
