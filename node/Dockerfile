@@ -26,8 +26,8 @@ ADD run.sh /run.sh
 RUN chmod 755 /run.sh
 
 #添加node到Docker
-ADD	node-v0.12.4-linux-x64.tar.gz /root
-RUN mv /root/node-v0.12.4-linux-x64 /usr/local/node && cd /usr/local/bin && ln -s /usr/local/node/bin/* . && rm -rf /root/node-v0.12.4-linux-x64
+ADD	node-v4.2.2-linux-x64.tar.gz /root
+RUN mv /root/node-v4.2.2-linux-x64 /usr/local/node && cd /usr/local/bin && ln -s /usr/local/node/bin/* . && rm -rf /root/node-v0.12.4-linux-x64
 
 #安装express
 #RUN npm install -g express
