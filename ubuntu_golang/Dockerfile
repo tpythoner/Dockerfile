@@ -38,7 +38,7 @@ RUN			mkdir -p /var/lib/golang
 
 #开发端口
 EXPOSE      22
-EXPOSE      80
+EXPOSE      9000
 
 #设置自启动命令
 CMD ["/run.sh"]
